@@ -1,0 +1,12 @@
+base_url: https://e-commerce-for-testing.onrender.com
+browser: chrome            # chrome | edge | firefox
+headless: false
+timeouts:
+  page_load: 90            # giay - Render goi mien phi co the khoi dong cham
+  element: 25              # giay - cho phan tu xuat hien
+  result: 8                # giay - cho ket qua sau khi bam nut (chuyen trang / thong bao)
+paths:
+  testdata: resources/testdata/testcases.xlsx
+  locators: locators.yaml
+  output: test-output
+run_order: [Signup, Login] # Dang ky truoc de tao tai khoan dung cho test dang nhap

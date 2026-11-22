@@ -1,0 +1,24 @@
+# Kho dinh vi phan tu. Doi giao dien chi can sua file nay, khong sua code.
+# Tien to: css= | xpath= | id= | name=   (khong ghi -> mac dinh la css)
+# Co the viet nhieu css cach nhau bang dau phay, phan tu nao hien thi truoc se duoc dung.
+
+# --- DA XAC NHAN (trang dang nhap) ---
+header.login_button: 'a[href="/signin"] button, a[href="/signin"]'
+signin.email:        'input[name="email"]'
+signin.password:     'input[name="password"]'
+signin.submit:       'button[type="submit"]'
+
+# --- CHUA XAC NHAN: chay tools/inspect_forms.py roi sua lai cho dung trang that ---
+header.signup_button: 'a[href="/signup"] button, a[href="/signup"]'
+signup.email:         'input[name="email"]'
+signup.password:      'input[name="password"]'
+signup.password_confirm: 'xpath=(//input[@type="password"])[2]'   # o Password Confirm (o mat khau thu 2)
+signup.submit:        'button[type="submit"]'
+
+# Thong bao hien thi sau khi bam nut (Chakra UI thuong dung alert/toast)
+message.any: '.chakra-alert, [role="alert"], [role="status"], .chakra-form__error-message'
+
+# Nut dang xuat sau khi dang nhap (co the nam trong menu)
+nav.logout: 'xpath=//*[self::button or self::a or self::p or self::span or self::li][contains(translate(normalize-space(.), "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"), "logout") or contains(normalize-space(.), "Đăng xuất")]'
+# Nut mo menu nguoi dung (neu Logout nam trong menu). De trong neu khong co.
+nav.user_menu: 'button[aria-haspopup="menu"], .chakra-menu__menu-button'

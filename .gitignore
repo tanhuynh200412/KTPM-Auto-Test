@@ -1,0 +1,6 @@
+.env
+__pycache__/
+test-output/reports/*
+test-output/screenshots/*
+!test-output/reports/.gitkeep
+!test-output/screenshots/.gitkeep
